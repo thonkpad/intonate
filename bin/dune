@@ -1,0 +1,6 @@
+(executable
+ (public_name intonate)
+ (name main)
+ (libraries intonate dream)
+ (preprocess
+  (pps lwt_ppx)))

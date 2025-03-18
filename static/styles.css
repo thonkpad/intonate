@@ -1,0 +1,47 @@
+/* Default to Light Mode */
+body {
+    background-color: white;
+    color: black;
+    font-family: Arial, sans-serif;
+}
+
+/* Dark Mode Styles */
+.dark-mode {
+    background-color: black;
+    color: white;
+}
+
+/* Toggle Button */
+#theme-toggle {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    padding: 8px 12px;
+    background: gray;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    border-radius: 5px;
+}
+
+#theme-toggle:hover {
+    background: darkgray;
+}
+
+/* SVG Placeholder Adjustments */
+.light-mode svg rect {
+    fill: #ddd;
+}
+
+.light-mode svg text {
+    fill: #666;
+}
+
+.dark-mode svg rect {
+    fill: #333;
+}
+
+.dark-mode svg text {
+    fill: #aaa;
+}
