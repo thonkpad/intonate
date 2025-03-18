@@ -1,14 +1,29 @@
-/* Default to Light Mode */
-body {
-    background-color: white;
-    color: black;
-    font-family: Arial, sans-serif;
+:root {
+    --bg-color: #fbf1c7;
+    --text-color: #3c3836;
+    --primary-color: #d65d0e;
+    --primary-hover: #af3a03;
+    --svg-bg-light: #ebdbb2;
+    --svg-text-light: #504945;
+    --svg-bg-dark: #282828;
+    --svg-text-dark: #a89984;
 }
 
-/* Dark Mode Styles */
+/* Dark Mode */
 .dark-mode {
-    background-color: black;
-    color: white;
+    --bg-color: #282828;
+    --text-color: #ebdbb2;
+    --primary-color: #d79921;
+    --primary-hover: #b57614;
+    --secondary-color: #83a598;
+    --secondary-hover: #458588;
+}
+
+/* Apply colors */
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: Arial, sans-serif;
 }
 
 /* Toggle Button */
@@ -17,7 +32,7 @@ body {
     top: 10px;
     left: 10px;
     padding: 8px 12px;
-    background: gray;
+    background: var(--primary-color);
     color: white;
     border: none;
     cursor: pointer;
@@ -26,22 +41,86 @@ body {
 }
 
 #theme-toggle:hover {
-    background: darkgray;
+    background: var(--primary-hover);
+}
+
+.quiz-button {
+    background-color: #d79921;
+    color: #282828;
+    font-size: 16px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition:
+        background-color 0.3s,
+        transform 0.1s;
+}
+
+.quiz-button:hover {
+    background-color: #fabd2f;
+}
+
+.quiz-button:active {
+    transform: scale(0.95);
+}
+
+#choices {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+
+#choices li {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+#choices button {
+    min-width: 200px;
+    text-align: center;
+}
+
+.quiz-option {
+    display: inline-block;
+    width: 250px;
+    padding: 10px;
+    border: none;
+    background-color: #d79921;
+    color: #282828;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: bold;
+    transition:
+        background-color 0.3s,
+        transform 0.1s;
+}
+
+.quiz-option:hover {
+    background-color: #fabd2f;
+}
+
+.quiz-option:active {
+    transform: scale(0.95);
 }
 
 /* SVG Placeholder Adjustments */
-.light-mode svg rect {
-    fill: #ddd;
+svg rect {
+    fill: var(--svg-bg-light);
 }
 
-.light-mode svg text {
-    fill: #666;
+svg text {
+    fill: var(--svg-text-light);
 }
 
+/* Dark Mode SVG Styles */
 .dark-mode svg rect {
-    fill: #333;
+    fill: var(--svg-bg-dark);
 }
 
 .dark-mode svg text {
-    fill: #aaa;
+    fill: var(--svg-text-dark);
 }

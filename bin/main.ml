@@ -4,4 +4,4 @@ let () =
   @@ Dream.router
        [ Dream.get "/" (Dream.from_filesystem "static" "index.html")
        ; Dream.get "/static/**" (Dream.static "static")
-       ; Dream.get "/quiz" (fun _ -> Dream.html "Sample text") ]
+       ; Dream.get "/quiz" (Dream.from_filesystem "static" "quiz.html") ]
