@@ -6,3 +6,4 @@ tmp/
 _build/
 .direnv/
 .envrc
+result
